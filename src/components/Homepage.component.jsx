@@ -60,12 +60,18 @@ class Homepage extends Component{
                                     <div className="card-body">
 
                                         <div className="">
-
-                                            {this.state.posts.map(post =>(
-                                                <div key={post.id}>
-                                                    <PostItem post={post} />
-                                                </div> 
-                                            ))}
+                                            {(this.state.posts.length) ? (
+                                                this.state.posts.map(post =>(
+                                                    <div key={post.id}>
+                                                        <PostItem post={post} />
+                                                    </div> 
+                                                ))
+                                            ): (
+                                                <div class="alert alert-danger" role="alert">
+                                                    There is no posts to show!
+                                                </div>
+                                            )}
+                                            
                                         </div>
                                         
                                     </div>
