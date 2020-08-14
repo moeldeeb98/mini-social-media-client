@@ -1,5 +1,9 @@
 import React from 'react'
 
+/**
+ * design of page not found for all requests 
+ * that are not supported by the website
+ */
 const PageNotFound = () => {
   return (
     <div className='container-xl'>

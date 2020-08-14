@@ -2,6 +2,10 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {logout} from './UserFunctions'
 
+/**
+ * design the navbar for all logged users
+ * handel the routes of the navbar links
+ */
 const Navbar = () =>{
     return (
     <header>

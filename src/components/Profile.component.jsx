@@ -3,6 +3,9 @@ import React from 'react'
 import './Profile.style.css'
 import profile_image from './../images/profile.png'
 
+/**
+ * desgin the profile card of the user who are logged in
+ */
 const Profile = () =>{
     return(
           <div className="row">
@@ -23,7 +26,7 @@ const Profile = () =>{
                             <div>
                               <small>{localStorage.getItem('email')}</small>
                             </div>
-                            <div className="desc">Passionate designer</div>
+                            <div className="desc">Full-stack web Developer</div>
                             <div className="desc">Curious developer</div>
                             <div className="desc">Tech geek</div>
                             

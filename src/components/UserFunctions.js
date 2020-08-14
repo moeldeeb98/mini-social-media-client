@@ -1,5 +1,10 @@
 import axios from 'axios'
 
+/**
+ * write all bussiness logic to integrate
+ * with the back-end by sending all requests to the back-end 
+ * and recieving the response
+ */
 
 const HOST_NAME='http://localhost:8000'
 

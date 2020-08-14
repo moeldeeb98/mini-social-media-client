@@ -486,18 +486,9 @@ iframe {
 /*** start homepage **/
 
 .app-container{
+  min-height: 100vh;
   font-family: sans-serif;
   background-color: #E9EBEE;
-}
-
-/* .app-container .card{
-  background-color: transparent;
-} */
-
-.app-container .card-header{
-  /* background-color: #4267B2;
-  font-weight: bold;
-  color: #fff; */
 }
 
 .app-container .card{

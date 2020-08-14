@@ -1,6 +1,12 @@
 import React from 'react'
 import {creatPost} from './UserFunctions'
 
+/**
+ * desgin the form to create a new post
+ * and handel its submition
+ * 
+ */
+
 const CreatePost = () =>{
 
     return(

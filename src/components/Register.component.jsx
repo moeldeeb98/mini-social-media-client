@@ -2,6 +2,10 @@ import React from 'react'
 import {register} from './UserFunctions'
 import socialNetowrkImage from './../images/img-01.png'
 
+/**
+ * design the registration form
+ * and handel its submition
+ */
 const Register = () =>{
 
 

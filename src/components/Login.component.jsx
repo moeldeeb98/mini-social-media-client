@@ -3,6 +3,11 @@ import socialNetowrkImage from './../images/img-01.png'
 
 import {login} from './UserFunctions'
 
+/**
+ * design the login page
+ * and handel its submition
+ * 
+ */
 const Login = () =>{
     return(
         <div className="limiter">

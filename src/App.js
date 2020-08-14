@@ -16,6 +16,11 @@ function App() {
     <Router>
       <Switch>
 
+        {/* 
+        
+          create the routes for application
+          
+        */}
         <Route
           exact
           path='/'

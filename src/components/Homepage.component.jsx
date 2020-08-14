@@ -6,6 +6,10 @@ import PostItem from './PostItem.component'
 import Profile from './Profile.component'
 import CreatePost from './CreatePost.component'
 
+/**
+ * design the homepage for all users who are 
+ * logged in the website 
+ */
 class Homepage extends Component{
 
     constructor(props){

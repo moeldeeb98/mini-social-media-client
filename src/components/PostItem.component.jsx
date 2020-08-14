@@ -1,6 +1,9 @@
 import React from 'react'
 import {deletePost} from './UserFunctions'
 
+/**
+ * desgin display Post 
+ */
 const PostItem = (props) =>{
     const {post} = props
     return(
