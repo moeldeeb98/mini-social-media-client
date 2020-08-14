@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import {getAllPosts} from './UserFunctions'
+import {getAllPosts, getMyPosts} from './UserFunctions'
 import Navbar from './Navbar.component'
 import PostItem from './PostItem.component'
 import Profile from './Profile.component'
@@ -8,14 +8,23 @@ import CreatePost from './CreatePost.component'
 
 class Homepage extends Component{
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
         this.state ={
-            posts: []
+            posts: [],
+            isTimeline: false
         }
 
-        getAllPosts().then((res)=>{
+        let func = null
+        if(this.props.match.path == '/homepage'){
+            func = getAllPosts()
+        }else if(this.props.match.path == '/timeline'){
+            func = getMyPosts()
+        }
+
+        // console.log('props', this.props)
+        func.then((res)=>{
             if(res.data.data){
                 this.setState({
                     posts: res.data.data
@@ -25,6 +34,7 @@ class Homepage extends Component{
             }
         })
     }
+
 
     render(){
         return(

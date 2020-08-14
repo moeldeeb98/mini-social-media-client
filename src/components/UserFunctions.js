@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const HOST_NAME='http://localhost:8001'
+const HOST_NAME='http://localhost:8000'
 
 
 export const register = newUser =>{
@@ -90,6 +90,24 @@ export const creatPost = (post) =>{
 export const deletePost = (post_id) =>{
     return axios
     .delete(`${HOST_NAME}/api/posts/${post_id}`,{
+        headers: {
+            'Content-Type': 'application/json', 
+            'Accept': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+    })
+    .then( res => {
+        return res
+    })
+    .catch( err =>{
+        console.log(err.response)
+        return err.response
+    })
+}
+
+export const getMyPosts = () =>{
+    return axios
+    .get(`${HOST_NAME}/api/timeline`,{
         headers: {
             'Content-Type': 'application/json', 
             'Accept': 'application/json',
