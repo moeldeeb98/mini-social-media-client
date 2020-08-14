@@ -557,3 +557,53 @@ iframe {
   width: 60px;
 }
 /** end profile page **/
+
+/*** start navbar ***/
+
+
+.nav__links li,
+.nav__links a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header{
+    align-items: center;
+    padding: 5px 10px 5px;
+    background-color: #0069D9;
+    font-weight: bold;
+}
+
+
+header .logo{
+    padding-left: 20px;
+    font-size: 30px;
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 10px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+
+.nav__links li a{
+  font-weight: bold;
+}
+
+.nav__links li a:hover{
+    text-decoration: underline;
+}
+
+
+/** end navbar ***/
