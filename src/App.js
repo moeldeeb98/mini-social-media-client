@@ -3,27 +3,77 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  // Redirect,
 } from 'react-router-dom';
 
 
 
-// import Navbar from './components/Navbar.component'
 import Homepage from './components/Homepage.component'
 import Login from './components/Login.component'
 import Register from './components/Register.component'
-import Profile from './components/Profile.component'
-
+import PageNotFound from './components/NotFound.component'
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/' component={Login} />
-        <Route exact path="/homepage" component={Homepage}></Route>
-        <Route exact path="/timeline" component={Homepage}></Route>
-        <Route exact path="/login" component={Login}></Route>
-        <Route exact path="/register" component={Register}></Route>
-        <Route exact path="/profile" component={Profile}></Route>
+
+        <Route
+          exact
+          path='/'
+          render={(props) =>
+            localStorage.getItem('token') ? (
+              window.location.href = '/homepage'
+            ) : (
+              window.location.href = '/login'
+            )
+          }
+        ></Route>
+        <Route
+          exact
+          path='/homepage'
+          render={(props) =>
+              localStorage.getItem('token')?(
+              <Homepage {...props}/>
+            ) : (
+              window.location.href = '/login'
+            )
+          }
+        ></Route>
+        <Route
+          exact
+          path='/timeline'
+          render={(props) =>
+              localStorage.getItem('token')?(
+              <Homepage {...props}/>
+            ) : (
+              window.location.href = '/login'
+            )
+          }
+        ></Route>
+        <Route
+          exact
+          path='/login'
+          render={(props) =>
+              localStorage.getItem('token')?(
+                window.location.href = '/homepage'
+            ) : (
+              <Login {...props} />
+            )
+          }
+        ></Route>
+        <Route
+          exact
+          path='/register'
+          render={(props) =>
+              localStorage.getItem('token')?(
+                window.location.href = '/homepage'
+            ) : (
+              <Register {...props} />
+            )
+          }
+        ></Route>
+
+          <Route component={PageNotFound} ></Route>
+
       </Switch>
     </Router>
   );

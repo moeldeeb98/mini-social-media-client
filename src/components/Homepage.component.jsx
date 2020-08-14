@@ -15,22 +15,28 @@ class Homepage extends Component{
             posts: [],
         }
 
-        let func = null
         if(this.props.match.path == '/homepage'){
-            func = getAllPosts()
+            getAllPosts().then((res)=>{
+                if(res.data.data){
+                    this.setState({
+                        posts: res.data.data
+                    })
+                }else{
+                    alert(`error: ${res.data.message}`)
+                }
+            })
         }else if(this.props.match.path == '/timeline'){
-            func = getMyPosts()
+            getMyPosts().then((res)=>{
+                if(res.data.data){
+                    this.setState({
+                        posts: res.data.data
+                    })
+                }else{
+                    alert(`error: ${res.data.message}`)
+                }
+            })
         }
 
-        func.then((res)=>{
-            if(res.data.data){
-                this.setState({
-                    posts: res.data.data
-                })
-            }else{
-                alert(`error: ${res.data.message}`)
-            }
-        })
     }
 
 
