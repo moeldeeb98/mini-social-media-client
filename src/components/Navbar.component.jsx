@@ -15,12 +15,12 @@ const Navbar = () =>{
                         <div className="row">
                             <div className="col-md-8 text-left">
                                 <li>
-                                    <a className='nav-link' href='/recruiter/positions'>
+                                    <a className='nav-link' href='/homepage'>
                                         Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a className='nav-link' href='/recruiter/positions'>
+                                    <a className='nav-link' href='/timeline'>
                                         {localStorage.getItem('first_name')}
                                     </a>
                                 </li>

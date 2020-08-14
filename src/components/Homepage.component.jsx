@@ -13,7 +13,6 @@ class Homepage extends Component{
 
         this.state ={
             posts: [],
-            isTimeline: false
         }
 
         let func = null
@@ -23,7 +22,6 @@ class Homepage extends Component{
             func = getMyPosts()
         }
 
-        // console.log('props', this.props)
         func.then((res)=>{
             if(res.data.data){
                 this.setState({
@@ -53,7 +51,6 @@ class Homepage extends Component{
     
                             <div className="col-md-6">
                                 <div className="">
-                                    <div className="card-header">Home</div>
                                     <div className="card-body">
 
                                         <div className="">
@@ -68,7 +65,6 @@ class Homepage extends Component{
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-3">tata</div>
                         </div>
                     </div>
             </div>
